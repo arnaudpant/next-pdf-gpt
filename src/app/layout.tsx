@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "pdfGPT",
+  title: "PdfGPT",
   description: "Discute avec ton pdf et demande lui tout ce que tu veux",
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="light">
-      <body className={cn('min-h-screen font-sans antialiased grainy', inter.className)}>{children}</body>
+      <body className={cn('min-h-screen font-sans antialiased', inter.className)}>{children}</body>
     </html>
   );
 }
