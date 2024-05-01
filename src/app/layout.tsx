@@ -7,21 +7,26 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PdfGPT",
-  description: "Discute avec ton pdf et demande lui tout ce que tu veux",
+    title: "PdfGPT",
+    description: "Discute avec ton pdf et demande lui tout ce que tu veux",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="fr" className="light">
-      <body className={cn('min-h-screen font-sans antialiased', inter.className)}>
-        <Navbar />
-        {children}
-        </body>
-    </html>
-  );
+    return (
+        <html lang="fr" className="light">
+            <body
+                className={cn(
+                    "min-h-screen font-sans antialiased",
+                    inter.className
+                )}
+            >
+                <Navbar />
+                {children}
+            </body>
+        </html>
+    );
 }

@@ -1,13 +1,16 @@
+"use client"
+
 import { ArrowRight } from "lucide-react";
-import { signIn } from "../../../auth";
-import { buttonVariants } from "./button";
+// import { signIn } from "../../auth";
+import { buttonVariants } from "../components/ui/button";
+import { signIn } from "next-auth/react";
 
 const ButtonSignIn = () => {
     return (
         <form
             action={async () => {
-                "use server";
-                await signIn("github");
+                // "use server";
+                await signIn();
             }}
         >
             <button

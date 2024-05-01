@@ -1,11 +1,18 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
-import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server";
-import { ArrowRight } from "lucide-react";
-import ButtonSignIn from "./ui/ButtonSignIn";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
+import ButtonSignIn from "../auth/ButtonSignIn";
+import ButtonSignOut from "@/auth/ButtonSignOut";
+import { auth } from "../../auth";
 
-const Navbar = () => {
+const Navbar = async () => {
+   const session = await auth()
+
+   if(session) {
+       console.log('session', session.user)
+   }
+
     return (
         <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-md transition-all">
             <MaxWidthWrapper>
@@ -44,6 +51,7 @@ const Navbar = () => {
                                 <ArrowRight className="ml-1.5 h-5 w-5" />
                             </RegisterLink> */}
                             <ButtonSignIn />
+                            <ButtonSignOut />
                         </>
                     </div>
                 </div>
