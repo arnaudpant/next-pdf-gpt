@@ -6,12 +6,9 @@ import ButtonSignIn from "../auth/ButtonSignIn";
 import ButtonSignOut from "@/auth/ButtonSignOut";
 import { auth } from "../../auth";
 
-const Navbar = async () => {
-   const session = await auth()
 
-   if(session) {
-       console.log('session', session.user)
-   }
+const Navbar = async () => {
+    const session = await auth();
 
     return (
         <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-md transition-all">
@@ -42,16 +39,11 @@ const Navbar = async () => {
                             >
                                 Se connecter
                             </LoginLink>
-                            {/* <RegisterLink
-                                className={buttonVariants({
-                                    size: "sm",
-                                })}
-                            >
-                                Commencer{" "}
-                                <ArrowRight className="ml-1.5 h-5 w-5" />
-                            </RegisterLink> */}
-                            <ButtonSignIn />
-                            <ButtonSignOut />
+                            {session?.user ? (
+                                <ButtonSignOut />
+                            ) : (
+                                <ButtonSignIn />
+                            )}
                         </>
                     </div>
                 </div>

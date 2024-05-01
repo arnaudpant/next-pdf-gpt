@@ -3,16 +3,17 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
+import ButtonSignIn from "@/auth/ButtonSignIn";
 
 export default function Home() {
     return (
         <>
             <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
-                <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop:blur transition-all hover:border-gray-300 hover:bg-white/50">
+                {/* <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop:blur transition-all hover:border-gray-300 hover:bg-white/50">
                     <p className="text-sm font-semibold text-gray-700">
                         PdfGPT est en ligne
                     </p>
-                </div>
+                </div> */}
                 <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
                     Tchat avec ton <span className="text-orange-600">PDF</span>
                 </h1>
@@ -21,16 +22,9 @@ export default function Home() {
                     document PDF. Téléchargez votre document et commencez à lui
                     poser des questions.
                 </p>
-                <Link
-                    href="/dashboard"
-                    className={buttonVariants({
-                        variant: "default",
-                        size: "lg",
-                        className: "mt-5",
-                    })}
-                >
-                    Commencez <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                <div className="mt-5">
+                    <ButtonSignIn />
+                </div>
             </MaxWidthWrapper>
 
             <div>
@@ -38,8 +32,7 @@ export default function Home() {
                     <div
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                    >
-                    </div>
+                    ></div>
                     <div>
                         <div className="mx-auto max-w-6xl px-6 lg:px-8">
                             <div className="mt-16 flow-root sm:mt-24">
@@ -59,8 +52,7 @@ export default function Home() {
                     <div
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                    >
-                    </div>
+                    ></div>
                 </div>
             </div>
             {/* Feature section */}
