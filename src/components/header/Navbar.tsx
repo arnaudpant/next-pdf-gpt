@@ -1,11 +1,10 @@
 import Link from "next/link";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import { buttonVariants } from "./ui/button";
+import MaxWidthWrapper from "../wrapper/MaxWidthWrapper";
+import { buttonVariants } from "../ui/button";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
-import ButtonSignIn from "../auth/ButtonSignIn";
+import ButtonSignIn from "../../auth/ButtonSignIn";
 import ButtonSignOut from "@/auth/ButtonSignOut";
-import { auth } from "../../auth";
-
+import { auth } from "../../../auth";
 
 const Navbar = async () => {
     const session = await auth();

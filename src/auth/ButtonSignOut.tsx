@@ -1,4 +1,5 @@
 "use client";
+import { buttonVariants } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
 
 const ButtonSignOut = () => {
@@ -8,7 +9,15 @@ const ButtonSignOut = () => {
                 await signOut();
             }}
         >
-            <button type="submit">Déconnexion</button>
+            <button
+                type="submit"
+                className={buttonVariants({
+                    size: "sm",
+                    variant: "outline",
+                })}
+            >
+                Déconnexion
+            </button>
         </form>
     );
 };
