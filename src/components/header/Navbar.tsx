@@ -1,10 +1,12 @@
 import Link from "next/link";
 import MaxWidthWrapper from "../wrapper/MaxWidthWrapper";
 import { buttonVariants } from "../ui/button";
-import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
 import ButtonSignIn from "../../auth/ButtonSignIn";
 import ButtonSignOut from "@/auth/ButtonSignOut";
 import { auth } from "../../../auth";
+import ButtonStart from "../ui/ButtonStart";
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
+import { ArrowRight } from "lucide-react";
 
 const Navbar = async () => {
     const session = await auth();
@@ -20,30 +22,17 @@ const Navbar = async () => {
 
                     {/* MENU DROITE */}
                     <div className="hidden items-center space-x-4 sm:flex">
-                        <>
-                            <Link
-                                href="/pricing"
-                                className={buttonVariants({
-                                    variant: "ghost",
-                                    size: "sm",
-                                })}
-                            >
-                                Tarifs
-                            </Link>
-                            <LoginLink
-                                className={buttonVariants({
-                                    variant: "ghost",
-                                    size: "sm",
-                                })}
-                            >
-                                Se connecter
-                            </LoginLink>
-                            {session?.user ? (
-                                <ButtonSignOut />
-                            ) : (
-                                <ButtonSignIn />
-                            )}
-                        </>
+                        <Link
+                            href="/pricing"
+                            className={buttonVariants({
+                                variant: "ghost",
+                                size: "sm",
+                            })}
+                        >
+                            Tarifs
+                        </Link>
+                        {session?.user ? <ButtonSignOut /> : <ButtonSignIn />}
+                       <ButtonStart />
                     </div>
                 </div>
             </MaxWidthWrapper>

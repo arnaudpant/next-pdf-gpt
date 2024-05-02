@@ -15,6 +15,7 @@ const ButtonSignIn = () => {
                 type="submit"
                 className={buttonVariants({
                     size: "sm",
+                    variant: "ghost",
                 })}
             >
                 Se connecter
