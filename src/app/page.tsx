@@ -1,36 +1,23 @@
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { ArrowRight } from "lucide-react";
+import MaxWidthWrapper from "@/components/wrapper/MaxWidthWrapper";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
+import ButtonStart from "@/components/ui/ButtonStart";
 
 export default function Home() {
     return (
         <>
             <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
-                <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop:blur transition-all hover:border-gray-300 hover:bg-white/50">
-                    <p className="text-sm font-semibold text-gray-700">
-                        PdfGPT est en ligne
-                    </p>
-                </div>
                 <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
                     Tchat avec ton <span className="text-orange-600">PDF</span>
                 </h1>
                 <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
                     PdfGPT vous permets de discuter avec n&apos; importe quel
-                    document PDF. Téléchargez votre document et commencez à lui
+                    document PDF. <br />Téléchargez votre document et commencez à lui
                     poser des questions.
                 </p>
-                <Link
-                    href="/dashboard"
-                    className={buttonVariants({
-                        variant: "default",
-                        size: "lg",
-                        className: "mt-5",
-                    })}
-                >
-                    Commencez <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                <div className="mt-5">
+                    <ButtonStart />
+                </div>
             </MaxWidthWrapper>
 
             <div>
@@ -38,8 +25,7 @@ export default function Home() {
                     <div
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                    >
-                    </div>
+                    ></div>
                     <div>
                         <div className="mx-auto max-w-6xl px-6 lg:px-8">
                             <div className="mt-16 flow-root sm:mt-24">
@@ -59,8 +45,7 @@ export default function Home() {
                     <div
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                    >
-                    </div>
+                    ></div>
                 </div>
             </div>
             {/* Feature section */}
@@ -68,7 +53,7 @@ export default function Home() {
                 <div className="mb-12 px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl sm:text-center">
                         <h2 className="mt-2 font-bold text-4xl text-gray-900 sm:text-5xl">
-                            Commencez le tchat dans quelques minutes
+                            Commencez la discussion après quelques secondes
                         </h2>
                         <p className="mt-4 text-lg text-gray-600">
                             Tchatter avec votre fichier PDF n&apos;a jamais été
@@ -87,8 +72,8 @@ export default function Home() {
                                 Créer un compte
                             </span>
                             <span className="mt-2 text-zinc-700">
-                                Soit vous commencez avec un forfait gratuit,
-                                soit vous choisissez notre{" "}
+                                Vous pouvez commencer avec le forfait gratuit,
+                                ou choisir notre{" "}
                                 <Link
                                     href="/pricing"
                                     className="text-blue-700 underline underline-offset-2"
@@ -108,7 +93,7 @@ export default function Home() {
                                 Téléchargez votre fichier PDF
                             </span>
                             <span className="mt-2 text-zinc-700">
-                                Nous traiterons votre dossier et le préparerons
+                                Nous téléchargeons votre fichier et le préparerons
                                 pour que vous puissiez discuter avec lui.
                             </span>
                         </div>
@@ -122,9 +107,7 @@ export default function Home() {
                                 Commencez à poser des questions
                             </span>
                             <span className="mt-2 text-zinc-700">
-                                C&apos;est si simple. Essayez PdfGPT
-                                aujourd&apos;hui – cela prend vraiment moins
-                                d&apos;une minute.
+                                Essayez PdfGPT aujourd&apos;hui et tirez le maximum de vos pdf
                             </span>
                         </div>
                     </li>
