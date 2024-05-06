@@ -1,4 +1,3 @@
-import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import { buttonVariants } from "./button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -7,7 +6,7 @@ import Link from "next/link";
 const ButtonStart = () => {
     return (
         <Link
-            href="/"
+            href="/dashboard"
             className={buttonVariants({
                 size: "sm",
                 variant: "pdf",
