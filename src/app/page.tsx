@@ -1,9 +1,15 @@
+"use client"
 import MaxWidthWrapper from "@/components/wrapper/MaxWidthWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import ButtonStart from "@/components/ui/ButtonStart";
 
+
+
+
 export default function Home() {
+
+    
     return (
         <>
             <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
@@ -19,7 +25,9 @@ export default function Home() {
                     <ButtonStart />
                 </div>
             </MaxWidthWrapper>
+            {/* TEST DB */}
 
+            {/*  */}
             <div>
                 <div className="relative isolate">
                     <div
