@@ -1,15 +1,10 @@
-"use client"
+"use client";
 import MaxWidthWrapper from "@/components/wrapper/MaxWidthWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import ButtonStart from "@/components/ui/ButtonStart";
 
-
-
-
 export default function Home() {
-
-    
     return (
         <>
             <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
@@ -18,8 +13,9 @@ export default function Home() {
                 </h1>
                 <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
                     PdfGPT vous permets de discuter avec n&apos; importe quel
-                    document PDF. <br />Téléchargez votre document et commencez à lui
-                    poser des questions.
+                    document PDF. <br />
+                    Téléchargez votre document et commencez à lui poser des
+                    questions.
                 </p>
                 <div className="mt-5">
                     <ButtonStart />
@@ -101,8 +97,9 @@ export default function Home() {
                                 Téléchargez votre fichier PDF
                             </span>
                             <span className="mt-2 text-zinc-700">
-                                Nous téléchargeons votre fichier et le préparerons
-                                pour que vous puissiez discuter avec lui.
+                                Nous téléchargeons votre fichier et le
+                                préparerons pour que vous puissiez discuter avec
+                                lui.
                             </span>
                         </div>
                     </li>
@@ -115,7 +112,8 @@ export default function Home() {
                                 Commencez à poser des questions
                             </span>
                             <span className="mt-2 text-zinc-700">
-                                Essayez PdfGPT aujourd&apos;hui et tirez le maximum de vos pdf
+                                Essayez PdfGPT aujourd&apos;hui et tirez le
+                                maximum de vos pdf
                             </span>
                         </div>
                     </li>
