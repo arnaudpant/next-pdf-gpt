@@ -3,8 +3,13 @@ import MaxWidthWrapper from "@/components/wrapper/MaxWidthWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import ButtonStart from "@/components/ui/ButtonStart";
+import { trpc } from "@/serveur/client";
 
 export default function Home() {
+
+    //const {data} = trpc.test.useQuery()
+
+
     return (
         <>
             <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
