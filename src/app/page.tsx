@@ -3,12 +3,12 @@ import MaxWidthWrapper from "@/components/wrapper/MaxWidthWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import ButtonStart from "@/components/ui/ButtonStart";
-import { trpc } from "@/serveur/client";
+import { trpc } from "@/server/client";
 
 export default function Home() {
 
-    //const {data} = trpc.test.useQuery()
-
+   const users = trpc.users.get.useQuery()
+  
 
     return (
         <>
@@ -28,7 +28,7 @@ export default function Home() {
             </MaxWidthWrapper>
             {/* TEST DB */}
 
-            {/*  */}
+            {/* <div>{JSON.stringify(users.data)}</div> */}
             <div>
                 <div className="relative isolate">
                     <div
