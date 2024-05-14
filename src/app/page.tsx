@@ -9,6 +9,7 @@ import { trpc } from "@/server/client";
 export default function Home() {
 
    const users = trpc.users.get.useQuery()
+  
 
     return (
         <>
@@ -27,7 +28,7 @@ export default function Home() {
                 </div>
             </MaxWidthWrapper>
 
-            <div>{JSON.stringify(users.data)}</div>
+            {/* <div>{JSON.stringify(users.data)}</div> */}
             <div>
                 <div className="relative isolate">
                     <div

@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 export const usersRouter = router({
     get: publicProcedure.query(async () => {
-        return prisma.session.findMany()
+        return prisma.user.findMany()
     }),
     // create: publicProcedure
     //     .input(
